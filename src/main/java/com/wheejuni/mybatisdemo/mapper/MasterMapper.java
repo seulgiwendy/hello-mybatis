@@ -11,4 +11,6 @@ public interface MasterMapper {
     Master findByMasterId(int id);
 
     Master findByName(String name);
+
+    void insertMaster(Master newMaster);
 }

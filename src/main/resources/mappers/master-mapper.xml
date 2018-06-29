@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.wheejuni.mybatisdemo.mapper.MasterMapper">
+
+    <select id="findByMasterId" parameterType="int" resultType="com.wheejuni.mybatisdemo.model.Master">
+        SELECT * FROM MASTER WHERE MASTER_ID = #{id}
+    </select>
+
+    <select id="findByName" parameterType="String" resultType="com.wheejuni.mybatisdemo.model.Master">
+        SELECT * FROM MASTER AS M WHERE M.NAME = #{name}
+    </select>
+
+    <insert id="insertMaster" parameterType="com.wheejuni.mybatisdemo.model.Master">
+        INSERT INTO MASTER (NAME) VALUES (#{name})
+    </insert>
+
+</mapper>
+
+
